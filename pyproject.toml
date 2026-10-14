@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "decision-shadow"
+version = "0.1.0"
+description = "Shadow-test a decision model (TypeSafe Jev and friends) against the LLM classifier it would replace, then pick thresholds from real traffic."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Jatin Garg" }]
+requires-python = ">=3.9"
+dependencies = []
+keywords = ["jev", "typesafe", "openrouter", "llm", "classification", "routing", "shadow-mode", "calibration"]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.urls]
+Homepage = "https://github.com/jatingargiitk/decision-shadow"
+
+[project.scripts]
+decision-shadow = "decision_shadow.cli:main"
+
+[tool.setuptools]
+packages = ["decision_shadow"]
